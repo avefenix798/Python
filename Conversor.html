@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertir URL</title>
+</head>
+<body>
+
+    <!-- Input de texto -->
+    <input type="text" id="urlInput" placeholder="Pega tu url aquí..." size="50">
+    
+    <!-- Botón que activa la función -->
+    <button onclick="convertirUrl()">Convertir a Enlace</button>
+    
+    <input type="text" id="resultado"  size="50">
+    
+    <script >
+        function convertirUrl() {
+            // 1. Obtener el texto del input
+            let texto = document.getElementById('urlInput').value;
+            
+            textoConEnlace = '</ref>' + texto +'<ref>';
+            
+         
+            navigator.clipboard.writeText(textoConEnlace)
+            // 4. Insertar el resultado en el div
+          
+            document.getElementById("resultado").value = textoConEnlace;
+        }
+    </script>
+
+    <p id="miTexto">Texto a copiar</p>
+<button id="btnCopiar">Copiar</button>
+
+<script>
+  document.getElementById('btnCopiar').addEventListener('click', () => {
+    let texto = '</ref><>';
+
+  });
+</script>
+
+</body>
+</html>
